@@ -145,3 +145,24 @@ button:hover {
 .btn-delete:hover {
   background-color: #c82333;
 }
+
+/* src/styles/Home.css */
+.cart-info {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* src/styles/ProductCard.css */
+.product-card button {
+  padding: 8px 12px;
+  background-color: #ff4b4b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #ff6b6b;
+}

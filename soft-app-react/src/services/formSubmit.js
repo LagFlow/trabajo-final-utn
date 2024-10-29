@@ -1,7 +1,7 @@
 // src/services/formSubmit.js
 export const submitForm = async (data) => {
   const response = await fetch(
-    "https://formsubmit.co/gabialberini733@gmail.com",
+    "https://formsubmit.co/mfigueroa@runaid.com.ar",
     {
       method: "POST",
       headers: {

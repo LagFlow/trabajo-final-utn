@@ -97,7 +97,7 @@ const AdminProducts = () => {
           value={form.imageUrl}
           onChange={handleChange}
           placeholder="URL de la imagen"
-          required // Campo requerido
+          required
         />
         <button type="submit">{editingId ? "Actualizar" : "Agregar"}</button>
       </form>
@@ -105,9 +105,7 @@ const AdminProducts = () => {
         {products.map((product) => (
           <div key={product.id} className="product-card">
             <div className="product-image">
-              {product.imageUrl && (
-                <img src={product.imageUrl} alt={product.name} />
-              )}
+              {product.imageUrl && <img src={product.imageUrl} alt={product.name} />}
             </div>
             <div className="product-info">
               <h2 className="product-name">{product.name}</h2>

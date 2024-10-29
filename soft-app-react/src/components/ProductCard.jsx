@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "../styles/AdminProducts.css";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, addToCart }) => {
   return (
     <div className="product-card">
       <div className="product-image">
@@ -11,6 +11,7 @@ const ProductCard = ({ product }) => {
         <h2 className="product-name">{product.name}</h2>
         <p className="product-description">{product.description}</p>
         <p className="product-price">Precio: ${product.price}</p>
+        <button onClick={addToCart}>Agregar al carrito</button>
       </div>
     </div>
   );

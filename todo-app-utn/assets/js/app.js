@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   recognition.onresult = (event) => {
+    console.log('gg?');
     const taskText = event.results[event.results.length - 1][0].transcript;
     if (editingTaskId) {
       editTask(taskText);

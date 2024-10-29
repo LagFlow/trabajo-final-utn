@@ -8,22 +8,20 @@
 
 /* Variables */
 :root {
-  --primary-color: #b3e5fc;
-  --secondary-color: #eceff1;
+  --primary-color: #e9e769;
+  --secondary-color: #ffffff;
 }
 
 /* Fondo del body */
 body {
-  background-image: url("../img/pattern.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, blue, yellow);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
 }
+
 
 /* Contenedor principal centrado */
 .container {
