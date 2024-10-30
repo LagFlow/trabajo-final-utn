@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="navbar-logo"> {/* Aquí puedes agregar un logo en lugar del texto */}
+      <div className="navbar-logo" onClick={() => navigate("/")}> {/* Aquí puedes agregar un logo en lugar del texto */}
         <img src={Logo} alt="Logo" className="logo" />
         <h1>Soft App</h1>
       </div>

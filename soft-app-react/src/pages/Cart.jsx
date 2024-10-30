@@ -18,6 +18,12 @@ const Cart = () => {
     localStorage.removeItem("cart"); // Elimina el carrito de localStorage
   };
 
+  const removeItem = (index) => {
+    const updatedCart = cartItems.filter((_, i) => i !== index); // Filtra el producto a eliminar
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
   // Calcular el precio total
   const totalPrice = cartItems.reduce((total, product) => total + parseFloat(product.price), 0);
 
@@ -33,6 +39,12 @@ const Cart = () => {
                 <div>
                   <h3>{product.name}</h3>
                   <p>Precio: ${product.price}</p>
+                  <button
+                    className="remove-item-button"
+                    onClick={() => removeItem(index)}
+                  >
+                    Eliminar
+                  </button>
                 </div>
               </li>
             ))}
@@ -44,9 +56,7 @@ const Cart = () => {
             Limpiar Carrito
           </button>
 
-          <div className="contact-section">
-            <ContactForm />
-          </div>
+          <ContactForm />
         </>
       ) : (
         <p>No hay productos en el carrito.</p>

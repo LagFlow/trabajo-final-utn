@@ -69,9 +69,7 @@ const Home = () => {
           ))
         )}
       </div>
-      <div className="contact-section">
-        <ContactForm />
-      </div>
+      <ContactForm />
     </div>
   );
 };
