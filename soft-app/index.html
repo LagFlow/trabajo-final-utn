@@ -25,7 +25,6 @@
           <p>Los mejores colchones del planeta</p>
         </div>
       </section>
-      <!-- sección de grilla para mostrar los colchones disponibles -->
       <section class="products-grid">
         <div class="product-card">
           <img src="./assets/img/1.jpg" alt="Colchoneta 1" />
@@ -33,8 +32,9 @@
           <p>Dimensiones: 190x90 cm</p>
           <p>Material: Espuma de alta densidad</p>
           <p>Precio: $20,000</p>
+          <button class="buy-button" onclick="showShippingCalculator()">Comprar</button>
         </div>
-
+      
         <div class="product-card">
           <img src="./assets/img/2.webp" alt="Colchoneta 2" />
           <h3>Colchoneta enrollable</h3>
@@ -42,18 +42,41 @@
           <p>Material: Espuma viscoelástica</p>
           <p>Color: Violeta</p>
           <p>Precio: $25,000</p>
+          <button class="buy-button" onclick="showShippingCalculator()">Comprar</button>
         </div>
-
+      
         <div class="product-card">
           <img src="./assets/img/3.png" alt="Colchón Soft 3" />
           <h3>Colchón Soft 3</h3>
           <p>Dimensiones: 210x110 cm</p>
           <p>Material: Látex natural</p>
           <p>Precio: $30,000</p>
+          <button class="buy-button" onclick="showShippingCalculator()">Comprar</button>
         </div>
       </section>
+      
+      <!-- Calculadora de Envío -->
+      <div id="shipping-calculator" class="shipping-calculator" style="display: none;">
+        <h3>Calculadora de Envío</h3>
+        <form id="shipping-form" class="form-group">
+          <label for="postal-code">Código Postal:</label>
+          <input
+            type="text"
+            id="postal-code"
+            name="postalCode"
+            placeholder="Ingresa tu código postal"
+            required
+          />
+          <button type="button" onclick="calculateShipping()">Calcular Envío</button>
+        </form>
+        <p id="shipping-result"></p>
+        <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center;">
+          <button type="button" onclick="alert('Compra realizada 😉')" id="buy-button" style="display: none;">Comprar</button>
+        </div>
+        <button onclick="closeShippingCalculator()">Cerrar</button>
+      </div>
+      
 
-      <!-- Sección para el formulario de contacto -->
       <section class="contact-form">
         <h2>Contáctanos</h2>
         <form
@@ -70,7 +93,7 @@
               placeholder="Ingresa tu nombre completo"
             />
           </div>
-
+      
           <div class="form-group">
             <label for="email">Correo electrónico</label>
             <input
@@ -80,7 +103,7 @@
               placeholder="Ingresa tu correo electrónico"
             />
           </div>
-
+      
           <div class="form-group">
             <label for="subject">Asunto</label>
             <textarea
@@ -90,9 +113,18 @@
               rows="4"
             ></textarea>
           </div>
-
+      
           <button type="submit">Enviar</button>
         </form>
+        
+        <!-- Botón de WhatsApp -->
+        <div class="whatsapp-contact">
+          <p>O contáctanos directamente por WhatsApp:</p>
+          <a href="https://wa.me/5492664270348" target="_blank" class="whatsapp-button">
+            <img src="./assets/img/whatsapp-icon.png" alt="WhatsApp" />
+            Enviar mensaje
+          </a>
+        </div>
       </section>
       <!-- Popup de confirmación -->
       <div id="confirmation-popup" class="popup">

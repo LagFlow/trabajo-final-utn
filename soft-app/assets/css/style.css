@@ -214,3 +214,83 @@ button[type="submit"]:hover {
     opacity: 1;
   }
 }
+
+.whatsapp-contact {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25d366;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.whatsapp-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.shipping-calculator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.shipping-calculator h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--primary-color)
+}
+
+#shipping-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#postal-code {
+  padding: 5px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+button[type="button"] {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#shipping-result {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+button[onclick="closeShippingCalculator()"] {
+  margin-top: 30px;
+  background-color: #d2d2d2;
+  border: none;
+  padding: 10px;
+}

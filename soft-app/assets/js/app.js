@@ -46,3 +46,40 @@ window.onclick = function (event) {
     closePopup();
   }
 };
+
+function showShippingCalculator() {
+  const calculator = document.getElementById("shipping-calculator");
+  calculator.style.display = "block";
+}
+
+function closeShippingCalculator() {
+  const calculator = document.getElementById("shipping-calculator");
+  const buyButton = document.getElementById("buy-button");
+  calculator.style.display = "none";
+  buyButton.style.display = "none";
+}
+
+function calculateShipping() {
+  const postalCode = document.getElementById("postal-code").value;
+  const shippingResult = document.getElementById("shipping-result");
+  const buyButton = document.getElementById("buy-button");
+
+  if (!postalCode) {
+    shippingResult.textContent = "Por favor, ingresa un código postal.";
+    return;
+  }
+
+  // Ejemplo de lógica de cálculo basada en el código postal
+  let shippingCost;
+
+  if (postalCode.startsWith("10") || postalCode.startsWith("11")) {
+    shippingCost = 500; // Área metropolitana
+  } else if (postalCode.startsWith("20")) {
+    shippingCost = 1000; // Área cercana
+  } else {
+    shippingCost = 1500; // Área lejana
+  }
+
+  shippingResult.textContent = `Costo de Envío: $${shippingCost}`;
+  buyButton.style.display = "block";
+}
